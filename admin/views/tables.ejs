@@ -1,0 +1,232 @@
+<!doctype html>
+<html lang="en" dir="ltr">
+
+
+<!-- Mirrored from demo.jsnorm.com/html/strikingdash/strikindash/ltr/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 21 Jan 2021 04:43:43 GMT -->
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Tables</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
+
+    <!-- inject:css-->
+
+    <link rel="stylesheet" href="css/plugin.min.css">
+
+    <link rel="stylesheet" href="/css/style.css">
+
+    <!-- endinject -->
+
+    <link rel="icon" type="image/png" sizes="16x16" href="img/favicon.png">
+</head>
+
+<body class="layout-light side-menu">
+    <div class="mobile-search"></div>
+
+    <div class="mobile-author-actions"></div>
+    <header class="header-top">
+        <nav class="navbar navbar-light">
+            <div class="navbar-left">
+                <a href="#" class="sidebar-toggle">
+                    <img class="svg" src="img/svg/bars.svg" alt="img"></a>
+                <a class="navbar-brand" href="#"><img class="svg dark" style="background-color: #2c99fff0;"
+                        src="/img/logo/logo.png" alt="" width="220px" height="60px"><img class="light"
+                        style="background-color: #2c99fff0;" src="/img/logo/logo.png" alt="" width="220px"
+                        height="60px"></a>
+            </div>
+            <div class="navbar-right">
+                <ul class="navbar-right__menu">
+                    <li class="nav-author">
+                        <div class="dropdown-custom">
+                            <a href="javascript:;" class="nav-item-toggle"><img src="/img/profilepic.png" alt=""
+                                    class="rounded-circle"></a>
+                            <div class="dropdown-wrapper">
+                                <div class="nav-author__info">
+                                    <div>
+                                        <h6>Hello <span id="username" style="font-weight: bold;">User Name</span></h6>
+                                    </div>
+                                </div>
+                                <div class="nav-author__options">
+                                    <a href="#" onclick="logout()" class="nav-author__signout">
+                                        <span data-feather="log-out"></span> Sign Out</a>
+                                </div>
+                            </div>
+                            <!-- ends: .dropdown-wrapper -->
+                        </div>
+                    </li>
+                    <!-- ends: .nav-author -->
+                </ul>
+                <!-- ends: .navbar-right__menu -->
+                <div class="navbar-right__mobileAction d-md-none">
+                    <a href="#" class="btn-search">
+                        <span data-feather="search"></span>
+                        <span data-feather="x"></span></a>
+                    <a href="#" class="btn-author-action">
+                        <span data-feather="more-vertical"></span></a>
+                </div>
+            </div>
+
+        </nav>
+    </header>
+    <main class="main-content">
+
+        <aside class="sidebar" id="admin">
+            <div class="sidebar__menu-group">
+                <ul class="sidebar_nav">
+                    <li class="menu-title">
+                        <span>Main menu</span>
+                    </li>
+
+                    <li>
+                        <a href="/" class="">
+                            <span data-feather="users" class="nav-icon"></span>
+                            <span class="menu-text">Order</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/table" class="active">
+                            <span data-feather="upload" class="nav-icon"></span>
+                            <span class="menu-text">Tables</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/food" class="">
+                            <span data-feather="upload" class="nav-icon"></span>
+                            <span class="menu-text">Food</span>
+                        </a>
+                    </li>
+
+                </ul>
+            </div>
+        </aside>
+
+        <div class="contents">
+
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-lg-12">
+
+                        <div class="breadcrumb-main user-member justify-content-sm-between ">
+                            <div class="d-flex flex-wrap justify-content-center breadcrumb-main__wrapper">
+                                <div
+                                    class="d-flex align-items-center user-member__title justify-content-center mr-sm-25">
+                                    <h4 class="text-capitalize fw-500 breadcrumb-title">Table Details</h4>
+                                </div>                                
+                            </div>
+                            <div class="action-btn">
+                                <a href="#" class="btn px-15 btn-primary" data-toggle="modal"
+                                    data-target="#add-contact">
+                                    <i class="las la-plus fs-16"></i>Add New Table
+                                </a>
+
+                                <!-- Modal -->
+                                <div class="modal fade add-contact" id="add-contact" role="dialog" tabindex="-1"
+                                    aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                                    <div class="modal-dialog modal-dialog-centered">
+                                        <div class="modal-content radius-xl">
+                                            <div class="modal-header">
+                                                <h6 class="modal-title fw-500" id="staticBackdropLabel">Table
+                                                    Information</h6>
+                                                <button type="button" class="close" data-dismiss="modal"
+                                                    aria-label="Close">
+                                                    <span data-feather="x"></span>
+                                                </button>
+                                            </div>
+                                            <div class="modal-body">
+                                                <div class="add-new-contact">
+                                                    <div>
+                                                      
+                                                        <div class="form-group mb-20">
+                                                            <label>Table Name</label>
+                                                            <input type="text" id="tablename"
+                                                                class="form-control form-control-lg"
+                                                                placeholder="Table Name">
+                                                        </div>
+
+                                                        <div class="button-group d-flex pt-20">
+
+                                                            <button class="btn btn-primary btn-default btn-squared"
+                                                                id="addproductbtn" onclick="addtable()">add
+                                                                new table
+                                                            </button>
+
+
+
+
+
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="userDatatable global-shadow border p-30 bg-white radius-xl w-100 mb-30">
+                            <div class="table-responsive">
+                                <table class="table mb-0 table-borderless">
+                                    <thead>
+                                        <tr class="userDatatable-header">
+
+                                            <th>
+                                                <span class="userDatatable-title">Table Name</span>
+                                            </th>
+                                            <th>
+                                                <span class="userDatatable-title">Qr Code</span>
+                                            </th>
+                                            <th>
+                                                <span class="userDatatable-title">Action</span>
+                                            </th>
+                                        </tr>
+                                    </thead>
+                                    <tbody id="tabledata">
+
+                                    </tbody>
+                                </table>
+                                <div id="nodata" class="text-center mt-4" style="display: none;">No Data</div>
+                                <div style="float: right;margin-top: 5px;" id="pagination-container"></div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+    <div class="overlay-dark-sidebar"></div>
+    <div class="customizer-overlay"></div>
+
+    <script src="http://maps.googleapis.com/maps/api/js?key=AIzaSyDduF2tLXicDEPDMAtC6-NLOekX0A5vlnY"></script>
+    <script src="/js/plugins.min.js"></script>
+    <script src="/js/script.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="/js/table.js"></script>
+    <script>
+        function logout() {
+            localStorage.clear()
+            window.location.reload()
+        }
+        // var userid = localStorage.getItem("userid")
+        // if (userid == null) {
+        //     window.location.replace("/login")
+        // }
+    </script>
+</body>
+
+
+<!-- Mirrored from demo.jsnorm.com/html/strikingdash/strikindash/ltr/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 21 Jan 2021 04:43:43 GMT -->
+
+</html>

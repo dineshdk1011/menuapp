@@ -1,0 +1,144 @@
+.w-50 {
+    width: 25% !important;
+}
+
+.price {
+    color: black;
+    font-weight: bold;
+}
+
+.textcart {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    color: black;
+}
+
+.foodcostomize {
+    margin-left: -26px;
+}
+
+button:focus {
+    outline: none !important;
+}
+
+.incrementbtn,
+.decrementbtn {
+    height: 32px;
+    border: 1px solid #0000002e !important;
+    border-radius: 5px;
+  
+}
+.cartinput{
+    margin-left: 10px;
+    margin-top: -8px;
+}
+
+.incrementbtn {
+    background-color: #FCC827 !important;
+}
+
+.incrementbtn:hover,
+.decrementbtn:hover {
+    background-color: #FCC827 !important;
+}
+.decrementbtnhome,.incrementbtnhome{
+    width: 12%;
+    color: white;
+}
+.cartinputhome{
+    width: 5%;
+    color: white;
+    margin-left: 4px;
+}
+.countbtn{
+    background-color: #FCC827;
+    padding: 5px;
+    border-radius: 5px;
+    margin-left: 51px;
+}
+
+@media screen and (max-width:650px) {
+    .w-50 {
+        width: 80% !important;
+        margin-left: 14px;
+        margin-top: 0px;
+        height: 26px;
+    }
+
+    .incrementbtn,
+    .decrementbtn {
+        height: 24px;
+        border: 1px solid #0000002e !important;
+        border-radius: 5px;
+       
+    }
+
+    
+
+    .description {
+        display: none;
+    }
+
+    .btndiv {
+        margin-left: 20px;
+        margin-top: 20px;
+    }
+
+    .foodcostomize {
+        margin-left: 0px;
+    }
+
+    .menu-section .menu-secrion-innner {
+        padding: 0px 0px;
+    }
+
+    .cardaddimg {
+        width: 90px !important;
+        height: 90px !important;
+        border-radius: 10%;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        border: 8px solid white;
+        /* margin-top: 30px !important; */
+        margin-left: 0px;
+    }
+
+    .price {
+        text-align: center;
+        color: black;
+    }
+
+    .carttitle {
+        margin-left: 40px;
+    }
+}
+
+.closeicon {
+    cursor: pointer;
+    font-size: 20px;
+    color: black;
+}
+
+.cardaddimg {
+    width: 130px;
+    height: 130px;
+    border-radius: 15%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border: 8px solid white;
+    margin-top: 13px;
+}
+.viewcartbtnsave {
+    float: right;
+    color: black;
+    font-weight: bolder;
+    position: absolute;
+    margin-top: 11px;
+    margin-left: 20px;
+    font-size: 13px;
+}

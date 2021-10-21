@@ -1,0 +1,262 @@
+<!doctype html>
+<html lang="en" dir="ltr">
+
+
+<!-- Mirrored from demo.jsnorm.com/html/strikingdash/strikindash/ltr/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 21 Jan 2021 04:43:43 GMT -->
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Home</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
+
+    <!-- inject:css-->
+
+    <link rel="stylesheet" href="css/plugin.min.css">
+
+    <link rel="stylesheet" href="/css/style.css">
+
+    <!-- endinject -->
+
+</head>
+<style>
+    .textalign {
+        text-align: initial;
+    }
+</style>
+
+<body class="layout-light side-menu">
+    <div class="mobile-search"></div>
+
+    <div class="mobile-author-actions"></div>
+    <header class="header-top">
+        <nav class="navbar navbar-light">
+            <div class="navbar-left">
+                <a href="#" class="sidebar-toggle">
+                    <img class="svg" src="img/svg/bars.svg" alt="img"></a>
+                <a class="navbar-brand" href="#"><img class="svg dark" style="background-color: #2c99fff0;"
+                        src="/img/logo/logo.png" alt="" width="220px" height="60px"><img class="light"
+                        style="background-color: #2c99fff0;" src="/img/logo/logo.png" alt="" width="220px"
+                        height="60px"></a>
+            </div>
+            <div class="navbar-right">
+                <ul class="navbar-right__menu">
+                    <li class="nav-author">
+                        <div class="dropdown-custom">
+                            <a href="javascript:;" class="nav-item-toggle"><img src="/img/profilepic.png" alt=""
+                                    class="rounded-circle"></a>
+                            <div class="dropdown-wrapper">
+                                <div class="nav-author__info">
+                                    <div>
+                                        <h6>Hello <span id="username" style="font-weight: bold;">User Name</span></h6>
+                                    </div>
+                                </div>
+                                <div class="nav-author__options">
+                                    <a href="#" onclick="logout()" class="nav-author__signout">
+                                        <span data-feather="log-out"></span> Sign Out</a>
+                                </div>
+                            </div>
+                            <!-- ends: .dropdown-wrapper -->
+                        </div>
+                    </li>
+                    <!-- ends: .nav-author -->
+                </ul>
+                <!-- ends: .navbar-right__menu -->
+                <div class="navbar-right__mobileAction d-md-none">
+                    <a href="#" class="btn-search">
+                        <span data-feather="search"></span>
+                        <span data-feather="x"></span></a>
+                    <a href="#" class="btn-author-action">
+                        <span data-feather="more-vertical"></span></a>
+                </div>
+            </div>
+
+        </nav>
+    </header>
+    <main class="main-content">
+
+        <aside class="sidebar" id="admin">
+            <div class="sidebar__menu-group">
+                <ul class="sidebar_nav">
+                    <li class="menu-title">
+                        <span>Main menu</span>
+                    </li>
+
+
+                    <li>
+                        <a href="/" class="active">
+                            <span data-feather="users" class="nav-icon"></span>
+                            <span class="menu-text">Order</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/table" class="">
+                            <span data-feather="users" class="nav-icon"></span>
+                            <span class="menu-text">Tables</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/food" class="">
+                            <span data-feather="upload" class="nav-icon"></span>
+                            <span class="menu-text">Food</span>
+                        </a>
+                    </li>
+
+                </ul>
+                <ul class="sidebar_nav" style="margin-top: 400px;margin-left: 20px;">
+
+
+
+
+                </ul>
+            </div>
+        </aside>
+
+        <div class="modal fade add-contact" id="add-contact" role="dialog" tabindex="-1"
+            aria-labelledby="staticBackdropLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content radius-xl">
+                    <div class="modal-header">
+                        <h6 class="modal-title fw-500" id="staticBackdropLabel">Contact Information</h6>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span data-feather="x"></span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="add-new-contact">
+                            <div>
+                                <div class="form-group mb-20">
+                                    <label>Name:</label>
+                                    <input type="text" class="form-control form-control-lg" id="name"
+                                        placeholder="Your Name">
+                                </div>
+                                <div class="form-group mb-20">
+                                    <label>Email Address:</label>
+                                    <input type="text" class="form-control form-control-lg" id="email"
+                                        placeholder="Email Address">
+                                </div>
+
+                                <div class="form-group mb-20">
+                                    <label>Password:</label>
+                                    <input type="text" class="form-control form-control-lg" id="password"
+                                        placeholder="Password">
+                                </div>
+
+                                <div class="button-group d-flex pt-20">
+
+
+
+                                    <button class="btn btn-primary btn-default btn-squared "
+                                        onclick="updateuserbtn()">Update User
+                                    </button>
+
+
+
+
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="contents">
+
+            <div class="container-fluid">
+                <div class="social-dash-wrap">
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <div class="breadcrumb-main">
+                                <h4 class="text-capitalize breadcrumb-title">Order</h4>
+                            </div>
+
+                        </div>
+
+                        <div class="col-lg-8 mb-25 col-xxl">
+
+                            <div class="card border-0">
+                                <div class="card-header">
+                                    <h6>All Order</h6>
+                                </div>
+                                <div class="card-body p-0">
+                                    <div class="tab-content">
+                                        <div class="tab-pane fade active show" id="t_channel-today" role="tabpanel"
+                                            aria-labelledby="t_channel-today-tab">
+                                            <div class="table-responsive">
+                                                <table class="table table--default traffic-table">
+                                                    <thead>
+                                                        <tr>
+                                                            <th class="textalign">Table</th>
+                                                            <th class="textalign">Food</th>
+                                                            <th class="textalign">Costomize</th>
+                                                            <th class="textalign">Quantity</th>
+                                                            <th class="textalign">Amount</th>
+                                                            <th class="textalign">Action</th>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody id="allorders">
+
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <div class="modal fade add-contact" id="customeFood" role="dialog" tabindex="-1"
+            aria-labelledby="staticBackdropLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content radius-xl">
+                    <div class="modal-header">
+                        <h6 class="modal-title fw-500" id="customeFoodname"></h6>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span data-feather="x"></span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="add-new-contact">
+                            <div>   
+                                <ul class="list-group" id="customeFoodli">
+                                    
+                                  </ul>                             
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <div class="overlay-dark-sidebar"></div>
+    <div class="customizer-overlay"></div>
+
+    <script src="http://maps.googleapis.com/maps/api/js?key=AIzaSyDduF2tLXicDEPDMAtC6-NLOekX0A5vlnY"></script>
+    <script src="/js/plugins.min.js"></script>
+    <script src="/js/script.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="/js/order.js"></script>
+    <!-- endinject-->
+</body>
+<script>
+    function logout() {
+        localStorage.clear()
+        window.location.reload()
+    }
+    // var userid = localStorage.getItem("userid")
+    // if (userid == null) {
+    //     window.location.replace("/login")
+    // }
+</script>
+
+</html>

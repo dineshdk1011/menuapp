@@ -1,0 +1,156 @@
+<!doctype html>
+<html lang="en" dir="ltr">
+
+
+<!-- Mirrored from demo.jsnorm.com/html/strikingdash/strikindash/ltr/login.html by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 21 Jan 2021 04:44:30 GMT -->
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Forget Password</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
+
+    <!-- inject:css-->
+
+    <link rel="stylesheet" href="css/plugin.min.css">
+
+    <link rel="stylesheet" href="/css/style.css">
+
+    <!-- endinject -->
+
+</head>
+<style>
+    .feedback {
+        color: red;
+        font-size: 10px;
+        display: none;
+    }
+</style>
+
+<body>
+    <main class="main-content">
+
+        <div class="signUP-admin">
+            <div class="container-fluid">
+                <div class="row justify-content-center">
+                    <div class="col-xl-4 col-lg-5 col-md-5 p-0">
+                        <div class="signUP-admin-left signIn-admin-left position-relative">
+                            <div class="signUP-overlay">
+                                <img class="svg signupTop" src="img/svg/signupTop.svg" alt="img" />
+                                <img class="svg signupBottom" src="img/svg/signupBottom.svg" alt="img" />
+                            </div><!-- End: .signUP-overlay  -->
+                            <div class="signUP-admin-left__content">
+                                <div
+                                    class="text-capitalize mb-md-30 mb-15 d-flex align-items-center justify-content-md-start justify-content-center">
+                                    <a class="wh-36 bg-primary text-white radius-md mr-10 content-center" href="#">a</a>
+                                    <span class="text-dark">admin</span>
+                                </div>
+                                <img src="http://www.stonedesigncountertops.com/2015/img/logo.png" alt="" srcset="">
+                            </div><!-- End: .signUP-admin-left__content  -->
+                            <div class="signUP-admin-left__img">
+                                <img class="img-fluid svg" src="img/svg/signupIllustration.svg" alt="img" />
+                            </div><!-- End: .signUP-admin-left__img  -->
+                        </div><!-- End: .signUP-admin-left  -->
+                    </div><!-- End: .col-xl-4  -->
+                    <div class="col-xl-8 col-lg-7 col-md-7 col-sm-8">
+                        <div class="signUp-admin-right signIn-admin-right  p-md-40 p-10">
+
+                            <div class="row justify-content-center">
+                                <div class="col-xl-7 col-lg-8 col-md-12">
+                                    <div class="edit-profile mt-md-25 mt-0">
+                                        <div class="card border-0">
+                                            <div class="card-header border-0  pb-md-15 pb-10 pt-md-20 pt-10 ">
+                                                <div class="edit-profile__title">
+                                                    <h6><span class="color-primary">Forget Password</span></h6>
+                                                </div>
+                                            </div>
+                                            <div class="card-body">
+                                                <div class="edit-profile__body">
+                                                    <div class="form-group mb-20" id="emaildiv">
+                                                        <label for="email">Email Address</label>
+                                                        <input type="email" class="form-control" id="email"
+                                                            placeholder="Email">
+                                                        <div class="feedback" id="emailfb">Email Is Required</div>
+                                                    </div>
+                                                    <div class="form-group mb-15" id="codediv" style="display: none;">
+                                                        <label for="password-field">Enter Code</label>
+                                                        <div class="position-relative">
+                                                            <input id="code" type="text" placeholder="******"
+                                                                class="form-control" name="code">
+                                                            <div class="feedback" id="codefb">Code Required</div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="form-group mb-15" id="passworddiv"
+                                                        style="display: none;">
+                                                        <label for="password-field">password</label>
+                                                        <div class="position-relative">
+                                                            <input id="password" type="password" placeholder="password"
+                                                                class="form-control" name="password">
+                                                            <div class="feedback" id="passwordfb">Password Is Required
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div
+                                                        class="button-group d-flex pt-1 justify-content-md-start justify-content-center" >
+                                                        <button id="firstnext"
+                                                            class="btn btn-primary btn-default btn-squared mr-15 text-capitalize lh-normal px-50 py-15 signIn-createBtn"
+                                                            onclick="forget()">
+                                                            Submit
+                                                        </button>
+                                                    </div>
+                                                    <div
+                                                        class="button-group d-flex pt-1 justify-content-md-start justify-content-center">
+                                                        <button id="secondnext" style="display: none;"
+                                                            class="btn btn-primary btn-default btn-squared mr-15 text-capitalize lh-normal px-50 py-15 signIn-createBtn"
+                                                            onclick="verify()">
+                                                            Submit
+                                                        </button>
+                                                    </div>
+                                                    <div
+                                                        class="button-group d-flex pt-1 justify-content-md-start justify-content-center">
+                                                        <button id="submitbtn" style="display: none;"
+                                                            class="btn btn-primary btn-default btn-squared mr-15 text-capitalize lh-normal px-50 py-15 signIn-createBtn"
+                                                            onclick="newpassword()">
+                                                            Submit
+                                                        </button>
+                                                    </div>
+                                                    <div class="mt-3"></div>
+                                                    <div
+                                                    class="signUp-topbar  mt-md-0 mb-md-0 mt-20 mb-1">
+                                                    <p class="mb-0">
+                                                        Already have an account?
+                                                        <a href="/login" class="color-primary">
+                                                            Sign in
+                                                        </a>
+                                                    </p>
+                                                </div>
+                                                </div>
+                                            </div><!-- End: .card-body -->
+                                        </div><!-- End: .card -->
+                                    </div><!-- End: .edit-profile -->
+                                </div><!-- End: .col-xl-5 -->
+                            </div>
+                        </div><!-- End: .signUp-admin-right  -->
+                    </div><!-- End: .col-xl-8  -->
+                </div>
+            </div>
+        </div><!-- End: .signUP-admin  -->
+
+    </main>
+
+    <!-- inject:js-->
+
+    <script src="/js/plugins.min.js"></script>
+    <script src="/js/script.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="/js/forgot.js"></script>
+
+    <!-- endinject-->
+</body>
+
+
+<!-- Mirrored from demo.jsnorm.com/html/strikingdash/strikindash/ltr/login.html by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 21 Jan 2021 04:44:32 GMT -->
+
+</html>

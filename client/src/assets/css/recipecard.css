@@ -1,0 +1,135 @@
+.text {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    /* number of lines to show */
+    -webkit-box-orient: vertical;
+    color: #808080d1;
+}
+
+.priceamount {
+    color: #FCC827;
+    /* background: #e5efd9; */
+    display: inline-block;
+    padding: 4px 20px 0px;
+    margin-bottom: 10px;
+    border-radius: 50px;
+    font-weight: 600;
+}
+
+.modal-header .close {
+    padding: 1rem 1rem;
+    margin: -1rem -14rem 0rem auto;
+}
+
+.checkboxsize {
+    width: 4%;
+}
+
+.menu-sectioncostomize {
+    /* background: url(../img/menu/bg-image.jpg); */
+    background-color: white;
+    /* padding: 130px 0px 130px; */
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    position: relative;
+}
+
+.labelcostomize {
+    cursor: pointer;
+    margin-top: 13px !important;
+    position: absolute;
+    margin-left: 7px;
+    font-size: 15px;
+}
+
+
+
+.nonvegicon {
+    width: 20px;
+    margin-right: 8px;
+    margin-top: -4px;
+}
+
+.vegicon {
+    width: 17px;
+    margin-right: 8px;
+    margin-top: -4px;
+}
+
+@media screen and (max-width:650px) {
+    .single-recipe .top-area .img {
+        width: 75px;
+        height: 75px;
+        border-radius: 10%;
+        margin-top: -8px;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+
+    * {
+        font-family: 'myFirstFont';
+    }
+
+    @font-face {
+        font-family: "myFirstFont";
+        src: url("../fonts/Gilroy-Light.ttf");
+    }
+
+
+
+    .recipe-main-content {
+        margin-left: 40px;
+    }
+
+    .firstfilter {
+        margin-left: -44px;
+    }
+
+    .menuitemdiv {
+        padding-bottom: 5px;
+        width: 120%;
+    }
+
+    .qrscan {
+        border-radius: 5px;
+    }
+
+    .registerbtn {
+        padding: 8px 15px;
+        font-weight: 600;
+        color: white !important;
+        border-radius: 5px;
+        /* display: inline-block; */
+        margin-bottom: 0px;
+        border: 0px;
+        font-size: 16px;
+        /* float: right; */
+        cursor: pointer;
+        width: auto;
+        height: auto;
+        transition: all ease 0.3s;
+        background-color: #FCC827;
+    }
+
+    .custom-button {
+        /* box-shadow: 0.872px 9.962px 20px 0px rgb(192 185 185 / 89%); */
+        padding: 2px 15px;
+        font-weight: 600;
+        color: white !important;
+        border-radius: 5px;
+        /* display: inline-block; */
+        margin-bottom: 0px;
+        border: 0px;
+        font-size: 16px;
+        float: right;
+        cursor: pointer;
+        width: auto;
+        height: auto;
+        transition: all ease 0.3s;
+        background-color: #FCC827;
+    }
+}

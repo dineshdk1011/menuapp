@@ -1,0 +1,448 @@
+<!doctype html>
+<html lang="en" dir="ltr">
+
+
+<!-- Mirrored from demo.jsnorm.com/html/strikingdash/strikindash/ltr/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 21 Jan 2021 04:43:43 GMT -->
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Food</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
+
+    <!-- inject:css-->
+
+    <link rel="stylesheet" href="css/plugin.min.css">
+
+    <link rel="stylesheet" href="/css/style.css">
+
+    <!-- endinject -->
+
+    <link rel="icon" type="image/png" sizes="16x16" href="img/favicon.png">
+</head>
+
+<body class="layout-light side-menu">
+    <div class="mobile-search"></div>
+
+    <div class="mobile-author-actions"></div>
+    <header class="header-top">
+        <nav class="navbar navbar-light">
+            <div class="navbar-left">
+                <a href="#" class="sidebar-toggle">
+                    <img class="svg" src="img/svg/bars.svg" alt="img"></a>
+                <a class="navbar-brand" href="#"><img class="svg dark" style="background-color: #2c99fff0;"
+                        src="/img/logo/logo.png" alt="" width="220px" height="60px"><img class="light"
+                        style="background-color: #2c99fff0;" src="/img/logo/logo.png" alt="" width="220px"
+                        height="60px"></a>
+            </div>
+            <div class="navbar-right">
+                <ul class="navbar-right__menu">
+                    <li class="nav-author">
+                        <div class="dropdown-custom">
+                            <a href="javascript:;" class="nav-item-toggle"><img src="/img/profilepic.png" alt=""
+                                    class="rounded-circle"></a>
+                            <div class="dropdown-wrapper">
+                                <div class="nav-author__info">
+                                    <div>
+                                        <h6>Hello <span id="username" style="font-weight: bold;">User Name</span></h6>
+                                    </div>
+                                </div>
+                                <div class="nav-author__options">
+                                    <a href="#" onclick="logout()" class="nav-author__signout">
+                                        <span data-feather="log-out"></span> Sign Out</a>
+                                </div>
+                            </div>
+                            <!-- ends: .dropdown-wrapper -->
+                        </div>
+                    </li>
+                    <!-- ends: .nav-author -->
+                </ul>
+                <!-- ends: .navbar-right__menu -->
+                <div class="navbar-right__mobileAction d-md-none">
+                    <a href="#" class="btn-search">
+                        <span data-feather="search"></span>
+                        <span data-feather="x"></span></a>
+                    <a href="#" class="btn-author-action">
+                        <span data-feather="more-vertical"></span></a>
+                </div>
+            </div>
+
+        </nav>
+    </header>
+    <main class="main-content">
+
+        <aside class="sidebar" id="admin">
+            <div class="sidebar__menu-group">
+                <ul class="sidebar_nav">
+                    <li class="menu-title">
+                        <span>Main menu</span>
+                    </li>
+
+                    <li>
+                        <a href="/" class="">
+                            <span data-feather="users" class="nav-icon"></span>
+                            <span class="menu-text">Order</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/table" class="">
+                            <span data-feather="upload" class="nav-icon"></span>
+                            <span class="menu-text">Tables</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/food" class="active">
+                            <span data-feather="upload" class="nav-icon"></span>
+                            <span class="menu-text">Food</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </aside>
+
+        <div class="contents">
+
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-lg-12">
+
+                        <div class="breadcrumb-main user-member justify-content-sm-between ">
+                            <div class="d-flex flex-wrap justify-content-center breadcrumb-main__wrapper">
+                                <div
+                                    class="d-flex align-items-center user-member__title justify-content-center mr-sm-25">
+                                    <h4 class="text-capitalize fw-500 breadcrumb-title">Food</h4>
+                                </div>
+                            </div>
+                            <div class="action-btn">
+                                <a href="#" class="btn px-15 btn-primary" data-toggle="modal"
+                                    data-target="#add-contact">
+                                    <i class="las la-plus fs-16"></i>Add New Food
+                                </a>
+
+                                <!-- Modal -->
+                                <div class="modal fade add-contact" id="add-contact" role="dialog" tabindex="-1"
+                                    aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                                    <div class="modal-dialog modal-dialog-centered">
+                                        <div class="modal-content radius-xl">
+                                            <div class="modal-header">
+                                                <h6 class="modal-title fw-500" id="staticBackdropLabel">Food Information
+                                                </h6>
+                                                <button type="button" class="close" data-dismiss="modal"
+                                                    aria-label="Close">
+                                                    <span data-feather="x"></span>
+                                                </button>
+                                            </div>
+                                            <div class="modal-body">
+                                                <div class="add-new-contact">
+                                                    <div>
+                                                        <div class="form-group mb-20">
+                                                            <label>Food Category</label>
+                                                            <select type="text" id="category"
+                                                                class="form-control form-control-lg"
+                                                                placeholder="Food Category">
+                                                                <option value="" selected>Select Category</option>
+                                                                <option value="Starters">Starters</option>
+                                                                <option value="Dishes">Dishes</option>
+                                                                <option value="Deserts">Deserts</option>
+                                                                <option value="Drinks">Drinks</option>
+                                                            </select>
+                                                        </div>
+                                                        <div class="form-group mb-20">
+                                                            <label>Food Type</label>
+                                                            <select type="text" id="foodtype"
+                                                                class="form-control form-control-lg"
+                                                                placeholder="Food Category">
+                                                                <option value="" selected>Select Type</option>
+                                                                <option value="Veg">Veg</option>
+                                                                <option value="Non-Veg">Non-Veg</option>
+                                                            </select>
+                                                        </div>
+
+                                                        <div class="form-group mb-20">
+                                                            <label>Food Name</label>
+                                                            <input type="text" id="foodname"
+                                                                class="form-control form-control-lg"
+                                                                placeholder="Food Name">
+                                                        </div>
+                                                        <div class="form-group mb-20">
+                                                            <label>Food Images</label>
+                                                            <input type="file" id="foodimage"
+                                                                class="form-control form-control-lg"
+                                                                placeholder="Images">
+                                                        </div>
+                                                        <div class="form-group mb-20">
+                                                            <label>Food Description</label>
+                                                            <textarea type="file" id="description"
+                                                                class="form-control form-control-lg"
+                                                                placeholder="Description"></textarea>
+                                                        </div>
+                                                        <div class="form-group mb-20">
+                                                            <label>Food Actual Price</label>
+                                                            <input type="text" id="price"
+                                                                class="form-control form-control-lg"
+                                                                placeholder="Food Name">
+                                                        </div>
+                                                        <div class="form-group mb-20">
+                                                            <label>Food Offer Price</label>
+                                                            <input type="text" value="0" id="offerprice"
+                                                                class="form-control form-control-lg"
+                                                                placeholder="Food Name">
+                                                        </div>
+                                                        <div class="form-group mb-20">
+                                                            <label>Food Customizable</label><br>
+                                                            <div class="row">
+
+                                                                <div class="col-md-2">
+                                                                    <label for="yes"><input type="radio" name="custome"
+                                                                            value="yes" id="yes"
+                                                                            class="form-control">Yes</label>
+                                                                </div>
+                                                                <div class="col-md-2">
+                                                                    <label for="no" style="width: 25px;"><input
+                                                                            type="radio" name="custome" value="no"
+                                                                            id="no" class="form-control">No</label>
+                                                                </div>
+                                                                <div class="col-md-8"></div>
+                                                            </div>
+                                                        </div>
+
+                                                        <div class="button-group d-flex pt-20">
+
+                                                            <button class="btn btn-primary btn-default btn-squared"
+                                                                id="addproductbtn" onclick="addfood()">add
+                                                                new table
+                                                            </button>
+
+
+
+
+
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="modal fade add-contact" id="add-customize" role="dialog" tabindex="-1"
+                                    aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                                    <div class="modal-dialog modal-dialog-centered">
+                                        <div class="modal-content radius-xl">
+                                            <div class="modal-header">
+                                                <h6 class="modal-title fw-500" id="staticBackdropLabel">Food
+                                                    Customization
+                                                </h6>
+                                                <button type="button" class="close" data-dismiss="modal"
+                                                    aria-label="Close">
+                                                    <span data-feather="x"></span>
+                                                </button>
+                                            </div>
+                                            <div class="modal-body">
+                                                <div class="add-new-contact">
+                                                    <div>
+                                                        <div class="form-group mb-20">
+                                                            <input type="button" value="Add More rows"
+                                                                onclick="insRow()">
+                                                            <input type="button" value="Add More columns"
+                                                                onclick="insCol()">
+                                                            <br>
+                                                            <br>
+                                                            <div id="POItablediv">
+                                                                <table id="POITable" border="1">
+                                                                    <tr>
+                                                                        <td>Delete?</td>
+                                                                        <td></td>
+                                                                        <td onclick="deleteCol(this)"><input
+                                                                                type="button" value="Delete"></td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td></td>
+                                                                        <td><b> Index</b> </td>
+                                                                        <td><input size=20 type="text"
+                                                                                style="font-weight: bold;font-size:14px;"
+                                                                                value="HEADER"></td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td><input type="button" value="Delete"
+                                                                                onclick="deleteRow(this)"></td>
+                                                                        <td><input size=15 type="text" value=""></td>
+                                                                        <td><input size=25 type="text"></td>
+                                                                    </tr>
+                                                                </table>
+                                                            </div>
+                                                        </div>
+
+                                                        <div class="button-group d-flex pt-20">
+
+                                                            <button class="btn btn-primary btn-default btn-squared"
+                                                                id="addproductbtn" onclick="addfood()">add
+                                                                new table
+                                                            </button>
+
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="modal fade add-contact" id="editfood" role="dialog" tabindex="-1"
+                                    aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                                    <div class="modal-dialog modal-dialog-centered">
+                                        <div class="modal-content radius-xl">
+                                            <div class="modal-header">
+                                                <h6 class="modal-title fw-500" id="staticBackdropLabel">Food
+                                                    Edit
+                                                </h6>
+                                                <button type="button" class="close" data-dismiss="modal"
+                                                    aria-label="Close">
+                                                    <span data-feather="x"></span>
+                                                </button>
+                                            </div>
+                                            <div class="modal-body">
+                                                <div class="add-new-contact">
+                                                    <div>
+
+
+                                                        <div class="form-group mb-20">
+                                                            <label>Food Name</label>
+                                                            <input type="text" id="foodnamee"
+                                                                class="form-control form-control-lg"
+                                                                placeholder="Food Name">
+                                                        </div>
+
+                                                        <div class="form-group mb-20">
+                                                            <label>Food Description</label>
+                                                            <textarea type="file" id="descriptione"
+                                                                class="form-control form-control-lg"
+                                                                placeholder="Description"></textarea>
+                                                        </div>
+                                                        <div class="form-group mb-20">
+                                                            <label>Food Actual Price</label>
+                                                            <input type="text" id="pricee"
+                                                                class="form-control form-control-lg"
+                                                                placeholder="Food Name">
+                                                        </div>
+                                                        <div class="form-group mb-20">
+                                                            <label>Food Offer Price</label>
+                                                            <input type="text" value="0" id="offerpricee"
+                                                                class="form-control form-control-lg"
+                                                                placeholder="Food Name">
+                                                        </div>
+                                                        <div class="form-group mb-20">
+                                                            <label>Food Customizable</label><br>
+                                                            <div class="row">
+
+                                                                <div class="col-md-2">
+                                                                    <label for="yes"><input type="radio" name="custome"
+                                                                            value="yes" id="yes"
+                                                                            class="form-control">Yes</label>
+                                                                </div>
+                                                                <div class="col-md-2">
+                                                                    <label for="no" style="width: 25px;"><input
+                                                                            type="radio" name="custome" value="no"
+                                                                            id="no" class="form-control">No</label>
+                                                                </div>
+                                                                <div class="col-md-8"></div>
+                                                            </div>
+                                                        </div>
+
+                                                        <div class="button-group d-flex pt-20">
+
+                                                            <button class="btn btn-primary btn-default btn-squared"
+                                                                id="addproductbtn" onclick="editfood()">add
+                                                                new table
+                                                            </button>
+
+
+
+
+
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="userDatatable global-shadow border p-30 bg-white radius-xl w-100 mb-30">
+                            <div class="table-responsive">
+                                <table class="table mb-0 table-borderless">
+                                    <thead>
+                                        <tr class="userDatatable-header">
+                                            <th>
+                                                <span class="userDatatable-title">Food Image</span>
+                                            </th>
+                                            <th>
+                                                <span class="userDatatable-title">Food Name</span>
+                                            </th>
+                                            <th>
+                                                <span class="userDatatable-title">Food Category</span>
+                                            </th>
+                                            <th>
+                                                <span class="userDatatable-title">Food Type</span>
+                                            </th>
+                                            <th>
+                                                <span class="userDatatable-title">Price</span>
+                                            </th>
+                                            <th>
+                                                <span class="userDatatable-title">Customizable</span>
+                                            </th>
+                                            <th>
+                                                <span class="userDatatable-title">Action</span>
+                                            </th>
+                                        </tr>
+                                    </thead>
+                                    <tbody id="fooddata">
+
+                                    </tbody>
+                                </table>
+                                <div id="nodata" class="text-center mt-4" style="display: none;">No Data</div>
+                                <div style="float: right;margin-top: 5px;" id="pagination-container"></div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+    <div class="overlay-dark-sidebar"></div>
+    <div class="customizer-overlay"></div>
+
+    <script src="http://maps.googleapis.com/maps/api/js?key=AIzaSyDduF2tLXicDEPDMAtC6-NLOekX0A5vlnY"></script>
+    <script src="/js/plugins.min.js"></script>
+    <script src="/js/script.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+
+    <script src="/js/food.js"></script>
+    <script>
+        function logout() {
+            localStorage.clear()
+            window.location.reload()
+        }
+        // var userid = localStorage.getItem("userid")
+        // if (userid == null) {
+        //     window.location.replace("/login")
+        // }
+    </script>
+</body>
+
+
+<!-- Mirrored from demo.jsnorm.com/html/strikingdash/strikindash/ltr/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 21 Jan 2021 04:43:43 GMT -->
+
+</html>
